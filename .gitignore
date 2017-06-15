@@ -1,0 +1,10 @@
+.DS_Store
+.vagrant
+/node_modules
+/bower_components
+/vendor
+/.idea
+npm-debug.log
+.ssh
+*.sql
+.env

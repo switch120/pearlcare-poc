@@ -1,0 +1,33 @@
+{
+  "name": "node-rest-api",
+  "version": "0.1.0",
+  "description": "RESTful NodeJS Server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/switch120/node-rest-api.git"
+  },
+  "author": "Scott Byers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/switch120/node-rest-api/issues"
+  },
+  "homepage": "https://github.com/switch120/node-rest-api#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.1",
+    "bower": "^1.8.0",
+    "crypto": "0.0.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "gulp": "^3.9.1",
+    "indeed-jobs-api": "^0.1.1",
+    "jsonwebtoken": "^7.3.0",
+    "mongoose": "^4.9.4",
+    "morgan": "^1.8.1"
+  }
+}
