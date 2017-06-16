@@ -1,0 +1,29 @@
+{
+  "name": "indeed-jobs-api",
+  "version": "0.1.1",
+  "description": "node.js library for indeed jobs search api",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulrays/indeed-jobs.git"
+  },
+  "keywords": [
+    "indeed",
+    "jobs",
+    "api"
+  ],
+  "author": "paulrays",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulrays/indeed-jobs/issues"
+  },
+  "homepage": "https://github.com/paulrays/indeed-jobs#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "querystring": "^0.2.0",
+    "request": "^2.76.0"
+  }
+}

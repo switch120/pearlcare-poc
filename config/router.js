@@ -9,7 +9,8 @@ module.exports = function(app)
     // API Routes
     //=========================
 
-    var api = require('indeed-jobs-api').getInstance(process.env.PUBLISHER_ID);
+    // var api = require('indeed-jobs-api').getInstance(process.env.PUBLISHER_ID);
+    var api = require('../lib/Indeed').getInstance(process.env.PUBLISHER_ID);
 
     apiRoutes.post("/indeed", function(req, res)
     {
