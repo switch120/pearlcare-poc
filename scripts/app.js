@@ -3,7 +3,7 @@ var ngApp = angular.module("ngApp", ['ui.bootstrap']);
 
 (function()
 {
-    ngApp.constant('API_URL', 'http://pearlcare-poc.dev:8080/api/');
+    ngApp.constant('API_URL', 'https://pearlcare-api.dev:8080/api/');
 
     // config event
     ngApp.config(function ($httpProvider, $compileProvider, $locationProvider, $qProvider)
