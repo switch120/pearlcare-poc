@@ -17,8 +17,10 @@ module.exports = function(app)
         var searchParams = req.body.search.length ? req.body.search.split(" ") : [];
 
         searchParams.push("pearlcare");
+        // append the unique search identifier to organize results by their arbitrary category
+        if (req.body.search_identifier.length) searchParams.push(req.body.search_identifier);
 
-        api.JobSearch()
+        var sObj = api.JobSearch()
             // .Radius(20)
             /*.WhereLocation({
                 city : "Stevens Point",
@@ -40,6 +42,11 @@ module.exports = function(app)
                     // do something with the error results
                     console.log(error);
                 });
+
+        if (req.body.postal_code.length) sObj.WhereLocation({ postalCode: req.body.postal_code });
+
+        // add radius from zip if both postalCode and Radius specified
+        if (req.body.radius.length && req.body.postal_code.length) sObj.Radius(req.body.radius);
     });
 
     // Set url for API group routes
