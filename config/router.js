@@ -17,8 +17,9 @@ module.exports = function(app)
         var searchParams = req.body.search.length ? req.body.search.split(" ") : [];
 
         searchParams.push("pearlcare");
+
         // append the unique search identifier to organize results by their arbitrary category
-        if (req.body.search_identifier.length) searchParams.push(req.body.search_identifier);
+        if (req.body.search_identifier) searchParams.push(req.body.search_identifier);
 
         var sObj = api.JobSearch()
             // .Radius(20)
@@ -43,10 +44,10 @@ module.exports = function(app)
                     console.log(error);
                 });
 
-        if (req.body.postal_code.length) sObj.WhereLocation({ postalCode: req.body.postal_code });
+        if (req.body.postal_code) sObj.WhereLocation({ postalCode: req.body.postal_code });
 
         // add radius from zip if both postalCode and Radius specified
-        if (req.body.radius.length && req.body.postal_code.length) sObj.Radius(req.body.radius);
+        if (req.body.radius && req.body.postal_code) sObj.Radius(req.body.radius);
     });
 
     // Set url for API group routes
